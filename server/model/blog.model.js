@@ -17,6 +17,10 @@ const blogSchema = mongoose.Schema({
         type: Date,
         default: new Date(),
     },
+    tag:{
+        type: String,
+        required: true
+    },
     createdBy:{
         id:{
             type: mongoose.Schema.Types.ObjectId,

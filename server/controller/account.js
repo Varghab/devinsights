@@ -54,3 +54,12 @@ exports.check = (req,res) =>{
         res.status(200).json({success:true, message:"User Authorized!"})
     }
 }
+
+exports.validate = (req, res) => {
+    const {id} = req.body;
+    if(req.userId===id){
+        res.json({success:true});
+    }else{
+        res.json({success:false});
+    }
+}

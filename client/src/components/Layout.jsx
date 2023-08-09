@@ -9,7 +9,7 @@ const Layout = () => {
     
     return (
         <UserProvider>
-        <div className='bg-neutral-100'>
+        <div className='bg-neutral-100 relative'>
             <Navbar />
                 <Outlet />
             <Footer />

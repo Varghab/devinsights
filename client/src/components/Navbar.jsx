@@ -66,7 +66,7 @@ const Navbar = () => {
             </div>
             <hr className='w-11/12 md:w-10/12 mx-auto mt-4 border-zinc-300'></hr>   
             {/* MenuBar */}
-            <div className={`bg-neutral-200 p-6 md:hidden h-full w-full top-0 fixed transition-all right-0 duration-300 z-30 ${toggle?"right-0  ":"-right-[50rem]" }`}>
+            <div className={`bg-neutral-200 p-6 md:hidden h-full top-0 fixed transition-all right-0 duration-300 z-30 ${toggle?"right-0 w-full":"-right-[80rem] w-0" }`}>
                     <div className='flex flex-col justify-between h-full'>
                         <div className='flex justify-between items-center'>
                             <NavLink onClick={hamburgerToggle} to='/'><h1 className='text-xl font-bold'>&lt;DevInsights /&gt;</h1></NavLink>
