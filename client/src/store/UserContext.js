@@ -43,7 +43,6 @@ const UserProvider = ({children}) =>{
                     email: email
                 }))
                 setisLogin(true);
-                
             }else{
                 setLogInMessage(response.data?.message)
             }

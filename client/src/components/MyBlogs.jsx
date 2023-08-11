@@ -42,7 +42,7 @@ const MyBlogs = () => {
                 {
                     myBlogs.length>0?myBlogs.map((blog,id)=>{
                         return <BlogCard id={blog._id} key={blog._id} tag={blog.tag} createId={blog.createdBy.id} title={blog.title} cover={blog.cover} name={blog.createdBy.name} date={blog.createdAt} />
-                    }): loading?<div className='h-96'><h1 className='text-xl'>Loading blogs <PulseLoader color='#7836d6' size={8} /> </h1></div>:<p>No blogs to show</p>
+                    }): loading?<div className='h-96'><h1 className='text-xl'>Loading blogs <PulseLoader color='#7836d6' size={8} /> </h1></div>:<div className='h-96'><p>No blogs to show</p></div>
                 }
             </div>
         </div>

@@ -28,13 +28,9 @@ const Login = () => {
         password: '',
         });
 
-    setLoading(true);
     setTimeout(()=>{
-        setLoading(false)
-        setTimeout(()=>{
-            navigate('/')
-        },1000) 
-    }, 3000)
+        navigate('/')
+    }, 1000)
     
     };
 

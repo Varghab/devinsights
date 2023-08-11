@@ -31,6 +31,8 @@ const Home = () => {
                 
             }
         }
+        
+
         getAllBlogs();
         
     },[])
@@ -92,13 +94,14 @@ const Home = () => {
                     <div className='text-center p-6 text-black rounded-xl'>
                         <h1 className='text-3xl font-normal'>All blogs</h1>
                     </div>
-                    <div className='flex mt-8 flex-col lg:flex-row gap-4 md:gap-1'>
-                        <section className='w-full lg:w-[30rem] px-4'>
+                    <div className='flex mt-8 flex-col lg:flex-row gap-4 md:gap-1 '>
+                        <section className='w-full lg:w-[40rem] px-4 '>
+                            <div className='sticky top-5'>
                             <div className='flex gap-2'>
                                 <input onChange={(e)=>setSearch(e.target.value)} value={search} type='text' className='px-3 py-2 w-full outline-none border-2 rounded-lg' placeholder='Search the blog...'></input>
                                 <button onClick={handleSearch} className='px-2 py-1 bg-purple-500 rounded-lg text-white'>Search</button>
                             </div>
-                            <div className='mt-4'>
+                            <div className='mt-4 sticky top-0'>
                                 <h1 className='text-2xl font-semibold'>Sort By</h1>
                                 <div className='mt-2 px-2 py-4 border-2  rounded-lg'>
                                     <button onClick={handleSortToggle} className='flex justify-between items-center w-full'>
@@ -131,6 +134,7 @@ const Home = () => {
                                 <div className='mt-4'>
                                     <button onClick={clearHandler} className='p-2 border-2 border-neutral-400 rounded-xl w-24 outline-none '>Clear</button>
                                 </div>
+                            </div>
                             </div>
                         </section>
                         {loading?<div className='w-full px-0 md:px-10 mt-4 md:mt-0'>

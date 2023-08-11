@@ -20,6 +20,7 @@ const Create = () => {
         cover:updateBlog?updateBlog.cover:"",
         tag:updateBlog?updateBlog.tag:""
       })
+
       useEffect(()=>{
         window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
       },[])
@@ -84,8 +85,6 @@ const Create = () => {
       }
 
       }
-
-
   return (
         <div className='w-10/12 mx-auto'>
           <form method='post' encType='multipart/form-data' onSubmit={submitHandler} >

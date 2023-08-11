@@ -6,7 +6,7 @@ import UserProvider from '../store/UserContext'
 
 
 const Layout = () => {
-    
+
     return (
         <UserProvider>
         <div className='bg-neutral-100 relative'>

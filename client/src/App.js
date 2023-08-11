@@ -9,6 +9,11 @@ import Create from './components/Create';
 import MyBlogs from './components/MyBlogs';
 import ProtectedRoute from './utils/ProtectedRoute';
 import CreateError from './components/Create/CreateError';
+import Profile from './components/Profile';
+import { useContext, useEffect } from 'react';
+import { useCookies } from 'react-cookie';
+import { userContext } from './store/UserContext';
+import axios from 'axios';
 
 
 
@@ -29,11 +34,15 @@ const router = createBrowserRouter([{
     element: <Signup />
   },{
     path: '/create',
-    element: <ProtectedRoute notLoggedIn={<CreateError/>} > <Create /> </ProtectedRoute>
+    element: <ProtectedRoute children={<Create /> } notLoggedIn={<CreateError/>} > </ProtectedRoute>
   },{
     path: '/myblogs',
     element: <ProtectedRoute notLoggedIn={<CreateError/>} ><MyBlogs /></ProtectedRoute>
-  }]
+  },{
+    path: '/myProfile',
+    element: <ProtectedRoute notLoggedIn={<CreateError />}><Profile /> </ProtectedRoute>
+  }
+]
 }])
 
 function App() {
